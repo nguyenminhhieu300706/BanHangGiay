@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "ThongTin";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<head>
+    <style>
+        .grid-container {
+            margin-top: 10px;
+            display: grid;
+            /* Không cần repeat(1, 1fr) cho container chính, auto là đủ */
+            grid-template-columns: auto;
+            grid-gap: 10px;
+        }
+
+        .footer-container {
+            background-color: white;
+            color: white;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        .diachi b {
+            display: inline-block;
+            width: 70px;
+        }
+
+        .form-contact p {
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .footer-col-3 p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<div class="grid-container">
+
+    <div class="footer-container">
+        <div class="form-contact">
+            <p>Thông Tin Địa Chỉ</p>
+            <br />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3276978210165!2d106.66829869502092!3d10.792241738446705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175292d1d673de5%3A0xc9bde4e6b22a2bed!2zMjgxLzI1LzE2IMSQLiBMw6ogVsSDbiBT4bu5LCBQaMaw4budbmcgMSwgVMOibiBCw6xuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oIDcyNTIwLCBWaeG7h3QgTmFt!5e1!3m2!1svi!2s!4v1763042124440!5m2!1svi!2s"
+                    width="500" height="350"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <address class="diachi" style="color: black;">
+            <b>Phone: </b>01231456789
+            <br />
+            <b>Email:</b>niheshop@gmail.com
+            <br />
+            <b>Website:</b>giaynation.com
+            <br />
+        </address>
+
+        <div class="footer-col-3" style="color: black;">
+            <p>Thông tin khác</p>
+            <p>TẦM NHÌN & SỨ MỆNH</p>
+            Chúng tôi tin rằng thể thao có thể truyền cảm hứng và gắn kết mọi người.
+            <br />
+            Bằng việc mang đến sản phẩm chính hãng, cao cấp và dịch vụ tận tâm, NiHe đồng hành để biến trải nghiệm thể thao thành niềm vui mỗi ngày,
+            <br />
+            đồng thời hướng tới trở thành nhà bán lẻ và phân phối thể thao uy tín hàng đầu thế giới, lan tỏa năng lượng tích cực và lối sống khỏe mạnh đến cộng đồng.
+        </div>
+    </div>
+</div>
+
+

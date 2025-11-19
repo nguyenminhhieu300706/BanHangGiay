@@ -1,0 +1,29 @@
+﻿@model BanHang001.Models.Category
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xác nhận xóa danh mục</h2>
+@using (Html.BeginForm("Xoa", "Category", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-control">
+        @Html.EditorFor(m => m.IDCate)
+        @Html.LabelFor(m => m.IDCate, new { htmlAttributes = new { @readonly = "readonly" } })
+    </div>
+
+    <div class="form-control">
+        @Html.EditorFor(m => m.NameCate)
+        @Html.LabelFor(m => m.NameCate)
+    </div>
+
+    <div>
+        <input type="submit" value="Xóa" />
+    </div>
+}
+@Html.ActionLink("Quay về trang danh sách", "DanhSachDanhMuc", null, new { @class = "btn btn-success" })
+
+

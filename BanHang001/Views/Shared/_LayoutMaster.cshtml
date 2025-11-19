@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/StyleHOME.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="menu">
+
+
+        <div class="fm-brand"><h3 class="bungee-tint-regular">NIHESHOP</h3></div>
+
+        <div class="fm-ten">
+            <ol>
+                <li><a href="TrangChu"><b> &#10224 Trang Chủ</b></a></li>
+                <li><a href="SanPham"><b> &#9738 Sản Phẩm</b></a></li>
+                <li><a href="ThongTin"><b> &#9743 Thông Tin</b></a></li>
+                <li><a href="Login"><b> &#9885 Login</b></a></li>
+                <li><a href="GioHang"><b> &#9842 Giỏ hàng</b></a></li>
+            </ol>
+        </div>
+
+
+
+
+        <div class="menu-search">
+            <input type="text" placeholder="Tìm kiếm giày, mã sản phẩm..." class="menu_search-input" autocomplete="off">
+        </div>
+    </div>
+
+
+    <section class="banner">
+        <div class="banner-content">
+
+            <h2>Chào mừng đến với Trang Web NiHeShop</h2>
+            <p>Mua sắm trực tuyến với mẫu giày đa dạng và chất lượng.</p>
+            <a href="#content" class="btn">Bắt đầu mua sắm</a>
+        </div>
+    </section>
+
+
+    <div id="content">
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+
+    <a href="#top">
+        <img src="~/images/Muiten.png" id="icon-img" />
+    </a>
+
+    <footer id="footer" class="nav">
+        <div class="gioithieu">
+            <h2>Tại sao chọn chúng tôi?</h2>
+            <p>
+                &#x2714 Hàng chính hãng 100% <br>
+                &#x2714 Giao hàng toàn quốc <br>
+                &#x2714 Đổi trả miễn phí trong 7 ngày
+            </p>
+        </div>
+        <div class="nav-bar-menu">
+            <p><b>Thông Tin Liên Hệ</b></p>
+            <p>
+                &#x1F4CC 281/25/16 Đường Lê Văn Sỹ, Phường 1, Tân Bình, Thành phố Hồ Chí Minh
+            </p>
+            <p>
+                &#9742 Hotline:01231456789
+            </p>
+            <p>
+                &#9993 Email:niheshop@gmail.com
+            </p>
+            <p>
+                &#9729 Thời Gian Hoạt Động: 8h-21h các ngày
+            </p>
+        </div>
+        <div class="nav-bar-right">
+            <p><b>Hỗ Trợ Khách Hàng</b></p>
+            <p>
+                Hướng dẫn đặt hàng-Thanh Toán
+            </p>
+            <p>
+                Chính sách giao hàng và nhận hàng
+            </p>
+            <p>
+                Đổi Trả – Bảo Hành
+            </p>
+        </div>
+        <div class="nav-bar-ct">
+            <p><b>Social &#174 </b></p>
+            <br />
+            <a href="https://www.facebook.com/mhiu307" target="_blank" title="Đây là link đến Facebook">
+                <img src="~/images/fb.png" alt="Facebook" class="icon" />
+            </a>
+            <a href="https://www.youtube.com/jkhiel8927" target="_blank" title="Đây là link đến YouTube">
+                <img src="~/images/yt.png" alt="YouTube" class="icon" />
+            </a>
+            <a href="https://www.instagram.com/nm.hieuu_307/" target="_blank" title="Đây là link đến Instagram">
+                <img src="~/images/ig.png" alt="Instagram" class="icon" />
+
+            </a>
+            <a href="https://www.tiktok.com/nm.hiei" target="_blank" title="Đây là link đến TikTok">
+                <img src="~/images/tt.png" alt="TikTok" class="icon" />
+            </a>
+        </div>
+        <p>&copy; @DateTime.Now.Year - NiHe Store</p>
+    </footer>
+    
+</body>
+</html>

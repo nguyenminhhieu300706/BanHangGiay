@@ -1,0 +1,362 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+/*#top{
+    width:100%;
+    height:360px;
+    background-color:darkblue;
+}
+#content {
+    width: 100%;
+    height: 1600px;
+    background-color: white;
+}*/
+/*#footer{
+    width:100%;
+    height:200px;
+    background-color: darkslategray;
+}*/
+.menu {
+    width: 100%;
+    min-height: 120px;
+    background-color: #808080;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around; /**/
+    padding: 20px 5%;
+    gap: 20px;
+}
+
+/*.logo {
+    width: 20%;
+}
+
+    .logo img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }*/
+
+.fm-brand {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 49px;
+    color: red;
+}
+
+.bungee-tint-regular {
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fm-ten ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+.fm-ten li {
+    padding: 10px 20px;
+}
+
+    .fm-ten li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+        padding: 10px 20px;
+        background-color: #bb2a2a;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+        .fm-ten li a:hover {
+            background-color: #e74c3c;
+            transform: translateY(-3px);
+        }
+
+/* ==================== TÌM KIẾM ==================== */
+
+
+.menu-search {
+    flex: 1;
+    max-width: 500px;
+    min-width: 280px;
+    height: 48px;
+    position: relative;
+}
+
+.menu_search-input {
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* ==================== BANNER ==================== */
+.banner {
+    background-image: url('../images/11ảnh banner bán giày,.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+    .banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+    }
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+    .banner-content h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .banner-content p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5e15;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+    .btn:hover {
+        background-color: #e64a19;
+    }
+/* ==================== SẢN PHẨM ==================== */
+h1 {
+    margin: 20px 0;
+    font-size: 22px;
+    text-align: center;
+}
+
+.list-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+    .item:hover {
+        transform: translateY(-5px);
+    }
+
+.item-image {
+    height: 300px; /* Khung cố định cho ảnh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+    .item-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s linear;
+    }
+
+        .item-image img:hover {
+            transform: scale(1.09);
+        }
+
+.item-title {
+    font-size: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+    .item-title:hover {
+        color: red;
+    }
+
+.item-price {
+    margin: 6px 0;
+    color: #707070;
+}
+
+.item-cmt {
+    font-size: 13px;
+    color: #555;
+}
+/* ==================== FOOTER ==================== */
+#footer {
+    background-color: #353535;
+    color: #ddd;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+    .nav > div {
+        line-height: 2;
+    }
+
+    .nav h2, .nav p > b {
+        color: #fff;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+
+.nav-bar-ct {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+    .nav-bar-ct img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+    }
+
+        .nav-bar-ct img:hover {
+            transform: scale(1.2);
+        }
+
+/* ==================== NÚT QUAY VỀ ĐẦU TRANG ==================== */
+#icon-img {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+    #icon-img:hover {
+        transform: scale(1.2);
+    }
+
+/* ==================== RESPONSIVE ==================== */
+/* ==== RESPONSIVE HOÀN HẢO ==== */
+@media (max-width: 1024px) {
+    .menu {
+        padding: 20px 3%;
+        justify-content: center;
+    }
+
+    .fm-brand {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .fm-ten ol {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fm-brand h3 {
+        font-size: 2.8rem;
+    }
+
+    .menu-search {
+        order: -1;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .fm-ten ol {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fm-ten li {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content h2 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    #footer {
+        padding: 40px 5% 20px;
+    }
+
+    .nav {
+        gap: 30px;
+    }
+
+        .nav > div {
+            text-align: center;
+        }
+}

@@ -1,0 +1,28 @@
+﻿@model BanHang001.Models.Category
+
+@{
+    ViewBag.Title = "Sua";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cập nhật danh mục</h2>
+@using (Html.BeginForm("Sua", "Category", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-control">
+        @Html.DisplayFor(m => m.IDCate)
+        @Html.EditorFor(m => m.IDCate, new { htmlAttributes = new { @readonly = "readonly" } })
+    </div>
+
+    <div class="form-control">
+        @Html.DisplayFor(m => m.NameCate)
+        @Html.EditorFor(m => m.NameCate)
+    </div>
+
+    <div class="form-control">
+        <input type="submit" value="Cập nhật" />
+    </div>
+}
+@Html.ActionLink("Quay về danh sách", "DanhSachDanhMuc", null, new { @class = "btn btn-success" })
+

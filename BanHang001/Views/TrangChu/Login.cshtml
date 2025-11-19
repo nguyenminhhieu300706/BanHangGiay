@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<style>
+        /* ==================== FORM ĐĂNG NHẬP ==================== */
+.form-container {
+    max-width: 420px;
+    width: 90%;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 40px 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.form-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #ff5e15;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Các ô input */
+.form-container input {
+    width: 100%;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.form-container input:focus {
+    border-color: #ff5e15;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(255, 94, 21, 0.1);
+}
+
+/* Nút Đăng nhập */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    margin: 20px 0 10px;
+    background: linear-gradient(135deg, #ff5e15, #e74c3c);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 94, 21, 0.3);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Link chuyển sang Đăng ký */
+.toggle-link {
+    margin-top: 20px;
+    font-size: 14.5px;
+    color: #666;
+}
+
+.toggle-link a {
+    color: #ff5e15;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.toggle-link a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+
+</style>
+
+<div class="form-container">
+    <h2 class="form-title">ĐĂNG NHẬP</h2>
+
+    <!-- Form Đăng nhập -->
+    <form id="registerForm">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Mật khẩu" required>
+
+        <button type="submit" class="submit-btn">ĐĂNG NHẬP</button>
+
+        <p class="toggle-link">
+            Bạn chưa có tài khoản ? <a href="~/TrangChu/Register">Đăng ký ngay</a>
+        </p>
+    </form>
+</div>
+

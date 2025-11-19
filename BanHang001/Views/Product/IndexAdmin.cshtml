@@ -1,0 +1,49 @@
+﻿@model  IEnumerable<BanHang001.Models.Product>
+
+@{
+    ViewBag.Title = "IndexAdmin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách sản phẩm</h2>
+@Html.ActionLink("Thêm mới", "Create", null, new {@class = "btn btn-success" })
+<br />
+@using (Html.BeginForm("IndexAdmin", "Product"))
+{
+    <input type="number" name="_min" value="1" />
+    <input type="number" name="_max" value="1" />
+    <input type="submit" value="Search" />
+}
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.ProductID)</th>
+        <th>@Html.DisplayNameFor(m => m.NamePro)</th>
+        <th>@Html.DisplayNameFor(m => m.DecriptionPro)</th>
+        <th>@Html.DisplayNameFor(m => m.Price)</th>
+        <th>@Html.DisplayNameFor(m => m.IDCate)</th>
+        <th>@Html.DisplayNameFor(m => m.ImagePro)</th>
+        <th></th>
+    </tr>
+
+    @foreach (var pro in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => pro.ProductID)</td>
+            <td>@Html.DisplayFor(m => pro.NamePro)</td>
+            <td>@Html.DisplayFor(m => pro.DecriptionPro)</td>
+            <td>@Html.DisplayFor(m => pro.Price)</td>
+            <td>@Html.DisplayFor(m => pro.IDCate)</td>
+            <td>
+                <img src="@Url.Content(pro.ImagePro)" width="100" height="100" />
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = pro.ProductID }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("Delete", "Delete", new { id = pro.ProductID }, new { @class = "btn btn-dark" })
+            </td>
+        </tr>
+    }
+</table>
+
+
+

@@ -1,0 +1,33 @@
+﻿@model BanHang001.Models.Category
+
+@{
+    ViewBag.Title = "Them";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Form Thêm Mới Danh Mục</h2>
+@using (Html.BeginForm("Them", "Category", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.IDCate)</th>
+            <td>@Html.EditorFor(m => m.IDCate)</td>
+        </tr>
+
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.NameCate)</th>
+            <td>@Html.EditorFor(m => m.NameCate)</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Lưu" />
+            </td>
+        </tr>
+
+    </table>
+}
+@Html.ActionLink("Quay về trang danh sách", "DanhSachDanhMuc", null, new { @class = "btn btn-success" })
+
+

@@ -1,0 +1,163 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<style>
+    /* ==================== FORM ĐĂNG KÝ (Đồng bộ với Đăng nhập) ==================== */
+.form-container {
+    max-width: 460px;
+    width: 92%;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px 38px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeIn 0.7s ease-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-title {
+    font-size: 29px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 32px;
+    letter-spacing: 1.2px;
+    position: relative;
+}
+
+.form-title::after {
+    content: "";
+    width: 90px;
+    height: 4.5px;
+    background: linear-gradient(90deg, #ff5e15, #e74c3c);
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+/* Input chung */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="date"] {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 11px 0;
+    border: 2px solid #e8e8e8;
+    border-radius: 50px;
+    font-size: 16px;
+    outline: none;
+    background-color: #fdfdfd;
+    transition: all 0.3s ease;
+}
+
+.form-container input:focus {
+    border-color: #ff5e15;
+    background-color: #fff;
+    box-shadow: 0 0 0 5px rgba(255, 94, 21, 0.12);
+}
+
+/* Nhóm radio giới tính */
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 15px 0;
+    font-size: 15.5px;
+}
+
+.radio-group label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #444;
+    font-weight: 500;
+}
+
+.radio-group input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #ff5e15;
+    cursor: pointer;
+}
+
+/* Nút Đăng ký */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    margin: 25px 0 12px;
+    background: linear-gradient(135deg, #ff5e15, #e74c3c);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 5px 18px rgba(255, 94, 21, 0.35);
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(231, 76, 60, 0.45);
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Link chuyển sang Đăng nhập */
+.toggle-link {
+    margin-top: 22px;
+    font-size: 15px;
+    color: #555;
+}
+
+.toggle-link a {
+    color: #ff5e15;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.25s;
+}
+
+.toggle-link a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+</style>
+<div class="form-container">
+    <h2 class="form-title">ĐĂNG KÝ</h2>
+
+    <!-- Form Đăng Ký -->
+    <form id="registerForm">
+        <input type="text" placeholder="Họ" required>
+        <input type="text" placeholder="Tên" required>
+
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="nu"> Nữ</label>
+            <label><input type="radio" name="gender" value="nam"> Nam</label>
+        </div>
+
+        <input type="text" class="date-placeholder" placeholder="mm/dd/yyyy"
+               onfocus="(this.type='date')"
+               onblur="(this.type='text')">
+
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Mật khẩu" required>
+
+        <button type="submit" class="submit-btn">ĐĂNG KÝ</button>
+
+        <p class="toggle-link">
+            Bạn đã có tài khoản? <a href="~/TrangChu/Login">Đăng nhập ngay</a>
+        </p>
+    </form>
+</div>
+
